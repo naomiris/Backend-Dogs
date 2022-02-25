@@ -18,7 +18,7 @@ const dogsTemperament = async (req, res) => {
         const splitTemp = hasTemperament.map((t) => t.split(", "));
         // console.log("split", splitTemp);
 
-        let setTemp = new Set(splitTemp);
+        let setTemp = splitTemp.flat();
         //  console.log('set',setTemp)
         for (t of setTemp) { 
             if (t)
